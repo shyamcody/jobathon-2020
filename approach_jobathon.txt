@@ -1,0 +1,23 @@
+For this jobathon program; most of the tasks are done manually.
+We created some extra features like:
+age difference: difference of upper and lower age
+z score of the recommended policy: to measure how out of box the amount of recommended policy is.
+
+For all the categorical features, we used one-hot encoding. Many of the categoricals had NA; but due
+to the definition of the variables it was clear that the NAs were also significant. That's why I stored
+them using UA value separately.
+
+The code associated is the final version. We also separately ran models without the city code and region code; achieveing
+60% around result. This we did first to get a good view of the problem and non-categorical features. We clubbed all the less
+than 3 people regions together to make their predictive signal more tough.
+
+We have tried out xgboost, random forest, extra trees classifier and lightgbm for modeling. We also tried a stacking classifier 
+with all these. The best performing model is the lgbm classifier according to our work.
+
+What more could have been done?
+due to time constraint, I only invested around 8hrs with this problem. But more could be done. 
+(1) reading of relevant papers.
+(2) if it was not a closed data problem, then we could try cultivate more demographic data ( bmi, height etc related datasets).
+(3) some automatic feature engineering could have been tried out.
+(4) external data could have been added to create better results.
+(5) fine-tuning could be completed using optuna and other libraries.
